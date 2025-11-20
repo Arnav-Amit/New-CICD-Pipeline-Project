@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dev Roast — a lighthearted site for coders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Funny one-liners and jokes about developers and coders.">
 </head>
-<body>Developers do not sleep… they just debug with their eyes closed.</h1>
-    <h2>Coders are like magicians—except their magic only works on their own machine.</h2>
-    <h3>A developers love language? When the code runs on the first try</h3>
-    <h4>Behind every great developer is a coffee machine working overtime.</h4>
-    <h5>Developers do not argue. They just say: ‘Works on my system</h5>
-    <h6>................................</h6>
+<body>
+    <main class="stage">
+        <header class="hero">
+            <div class="emoji" aria-hidden>💻</div>
+            <h1 class="title">Dev Roast</h1>
+            <p class="subtitle">Gentle (and accurate) commentary about developers, coders, and the sacred art of debugging.</p>
+        </header>
+
+        <section class="joke-area" aria-live="polite">
+            <div id="joke" class="joke">Click "Roast me" or press <kbd>Space</kbd> for a developer truth.</div>
+        </section>
+
+        <section class="controls">
+            <button id="jokeBtn" class="btn primary">Roast me</button>
+            <button id="randomBtn" class="btn ghost">Surprise me</button>
+        </section>
+
+        <section class="grid" style="margin-top:28px;max-width:820px;">
+            <h2 style="margin:0 0 10px 0">Relatable Truths</h2>
+            <ul>
+                <li>Developers do not sleep — they just debug with their eyes closed.</li>
+                <li>Coders are like magicians — their magic only works on their machine.</li>
+                <li>When code runs on the first try, it's either a miracle or a stealth bug.</li>
+                <li>Behind every great developer is a coffee machine working overtime.</li>
+                <li>"Works on my machine" is a full diplomatic policy.</li>
+            </ul>
+        </section>
+
+        <footer class="foot" style="margin-top:22px">
+            <small>Built for laughs — not production. Want this pushed to your repo? Ask me to commit.</small>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // small glue: add an extra button behavior without changing script.js
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const rnd = document.getElementById('randomBtn');
+            if(rnd){
+                rnd.addEventListener('click', ()=>{
+                    // call the same behavior as Roasting button by synthesizing a Space key event
+                    const evt = new KeyboardEvent('keydown',{code:'Space',key:' ',bubbles:true});
+                    window.dispatchEvent(evt);
+                });
+            }
+        });
+    </script>
 </body>
 </html>

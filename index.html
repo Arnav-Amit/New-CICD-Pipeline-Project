@@ -11,33 +11,58 @@
 <body>
     <main class="stage">
         <header class="hero">
-            <div class="emoji" aria-hidden>💻</div>
-            <h1 class="title">Dev Roast</h1>
-            <p class="subtitle">Gentle (and accurate) commentary about developers, coders, and the sacred art of debugging.</p>
+            <div class="emoji" aria-hidden>👨‍💻</div>
+            <h1 class="title">Friendly Dev Portfolio</h1>
+            <p class="subtitle"><span id="typed"></span></p>
+            <p class="subtitle" style="font-size:14px;opacity:.9">A creative, funny, and interview-friendly page that shows personality and skill.</p>
         </header>
 
-        <section class="joke-area" aria-live="polite">
-            <div id="joke" class="joke">Click "Roast me" or press <kbd>Space</kbd> for a developer truth.</div>
+        <section class="controls" style="margin-top:18px">
+            <button id="roastBtn" class="btn primary">Roast me (break the ice)</button>
+            <button id="hireBtn" class="btn ghost">Interview me</button>
+            <a class="btn" href="#projects" style="text-decoration:none;margin-left:8px">See projects</a>
         </section>
 
-        <section class="controls">
-            <button id="jokeBtn" class="btn primary">Roast me</button>
-            <button id="randomBtn" class="btn ghost">Surprise me</button>
+        <section id="about" style="margin-top:28px;max-width:900px;text-align:left;">
+            <h2>About (short and sharp)</h2>
+            <p>I'm a developer who loves clean code, coffee, and jokes that compile. I make web things that are fast, accessible, and occasionally hilarious.</p>
+            <p style="margin-top:8px">Interview tip: Start with a small problem and watch how I break it down — and then patch it with style.</p>
         </section>
 
-        <section class="grid" style="margin-top:28px;max-width:820px;">
-            <h2 style="margin:0 0 10px 0">Relatable Truths</h2>
+        <section id="skills" style="margin-top:24px;max-width:900px;text-align:left;">
+            <h2>Skills (and vibes)</h2>
             <ul>
-                <li>Developers do not sleep — they just debug with their eyes closed.</li>
-                <li>Coders are like magicians — their magic only works on their machine.</li>
-                <li>When code runs on the first try, it's either a miracle or a stealth bug.</li>
-                <li>Behind every great developer is a coffee machine working overtime.</li>
-                <li>"Works on my machine" is a full diplomatic policy.</li>
+                <li>HTML/CSS — semantic, responsive, and delightful</li>
+                <li>JavaScript — pragmatic and playful</li>
+                <li>DevOps basics — I make sure deployments aren't haunted</li>
+                <li>Problem solving — I debug without breaking hearts</li>
             </ul>
         </section>
 
-        <footer class="foot" style="margin-top:22px">
-            <small>Built for laughs — not production. Want this pushed to your repo? Ask me to commit.</small>
+        <section id="projects" style="margin-top:24px;max-width:900px;text-align:left;">
+            <h2>Projects (curated for interviews)</h2>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+                <article style="background:var(--glass);padding:14px;border-radius:8px;min-width:240px;flex:1">
+                    <h3>Playful CLI</h3>
+                    <p>A tiny terminal that tells jokes and greets your CI pipeline. Click "Demo" to run.</p>
+                    <button class="btn" data-demo="cli">Demo</button>
+                </article>
+                <article style="background:var(--glass);padding:14px;border-radius:8px;min-width:240px;flex:1">
+                    <h3>Mini Dashboard</h3>
+                    <p>Shows uptime, jokes-per-minute, and your team's caffeine status.</p>
+                    <button class="btn" data-demo="dash">Demo</button>
+                </article>
+            </div>
+            <div id="demoArea" style="margin-top:14px;padding:12px;border-radius:8px;background:rgba(255,255,255,0.6);min-height:60px"></div>
+        </section>
+
+        <section id="contact" style="margin-top:24px;max-width:900px;text-align:left;">
+            <h2>Contact</h2>
+            <p>If you're an interviewer: press <strong>Interview me</strong> and I'll show a short checklist to run during a first call.</p>
+        </section>
+
+        <footer class="foot" style="margin-top:28px">
+            <small>Pro tip: keep jokes short in interviews. Want this pushed to your repo? Tell me to commit.</small>
         </footer>
     </main>
 

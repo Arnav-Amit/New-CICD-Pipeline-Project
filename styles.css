@@ -1,0 +1,72 @@
+/* styles.css — styling for Dev Roast / Friendly Dev Portfolio */
+:root{
+  --bg1:#ffeed2;
+  --bg2:#ffe4f0;
+  --accent:#ff6b6b;
+  --accent2:#ffd93d;
+  --muted:#333845;
+  --glass: rgba(255,255,255,0.6);
+  --card-bg: rgba(255,255,255,0.7);
+  --shadow: 0 10px 30px rgba(59,59,91,0.06);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:'Inter',system-ui,'Segoe UI',Roboto,Arial,sans-serif;color:var(--muted);background:linear-gradient(135deg,var(--bg1),var(--bg2));-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.main, .stage{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:40px 20px}
+.stage{padding-bottom:80px}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;max-width:900px}
+.emoji{font-size:64px;transform:translateY(0);animation:bounce 2200ms infinite;filter:drop-shadow(0 6px 12px rgba(0,0,0,0.08))}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px) rotate(-6deg)}}
+.title{font-family:'Baloo 2',cursive;font-size:36px;margin:0;color:#2b2b2b}
+.subtitle{margin:0;color:#4b4b6b;opacity:0.95}
+
+/* Controls */
+.controls{margin-top:20px;display:flex;gap:12px;align-items:center}
+.btn{padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:700;box-shadow:0 6px 18px rgba(43,43,43,0.06);transition:transform .12s ease,box-shadow .12s ease,background .12s ease,opacity .12s ease;color:var(--muted)}
+.btn:active{transform:translateY(2px)}
+.btn:focus{outline:3px solid rgba(0,0,0,0.06);outline-offset:2px}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(90deg,var(--accent),#ff8a8a);color:white}
+.ghost{background:transparent;border:2px solid rgba(0,0,0,0.06);color:var(--muted)}
+.btn[disabled]{opacity:.6;cursor:default}
+
+/* Sections */
+section{max-width:900px;width:100%}
+.joke-area{margin-top:28px;background:linear-gradient(180deg,rgba(255,255,255,0.85),rgba(255,255,255,0.7));backdrop-filter:blur(6px);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+.joke{font-size:18px;line-height:1.4}
+.joke.emph{font-size:20px;font-weight:700;color:var(--accent2)}
+
+/* Project cards and demo area */
+article{background:var(--card-bg);padding:14px;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.04)}
+#demoArea{margin-top:14px;padding:12px;border-radius:8px;background:rgba(255,255,255,0.9);min-height:80px;max-height:220px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Roboto Mono,monospace;font-size:13px;color:#1b1b1b}
+#demoArea pre{margin:0;white-space:pre-wrap}
+
+/* Typing cursor for #typed */
+#typed{border-right:2px solid rgba(0,0,0,0.12);padding-right:6px}
+@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+#typed{animation:blink 1s steps(1,end) infinite}
+
+/* Confetti */
+.confetti-piece{position:fixed;font-size:20px;pointer-events:none;will-change:transform,opacity}
+
+/* Footer */
+.foot{margin-top:22px;color:#6b6b85}
+
+/* Accessibility and reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .emoji, #typed, .btn, .confetti-piece {animation: none !important; transition: none !important}
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark){
+  :root{--bg1:#0f1724;--bg2:#111827;--muted:#e6eef8;--glass: rgba(255,255,255,0.03);--card-bg: rgba(255,255,255,0.03)}
+  html,body{background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--muted)}
+  #demoArea{background:rgba(0,0,0,0.45);color:#e6eef8}
+}
+
+/* Responsive */
+@media (max-width:720px){
+  .title{font-size:28px}
+  .emoji{font-size:48px}
+  .controls{flex-direction:column;align-items:stretch}
+  #demoArea{max-height:160px}
+}

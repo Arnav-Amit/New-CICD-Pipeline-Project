@@ -3,66 +3,78 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Dev Roast — a lighthearted site for coders</title>
+    <title>Amit Kumar - Full Stack Developer & CI/CD Enthusiast</title>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Funny one-liners and jokes about developers and coders.">
+    <meta name="description" content="Amit Kumar's portfolio: A full-stack developer with a passion for clean code, robust CI/CD, and building innovative web solutions.">
 </head>
 <body>
     <main class="stage">
         <header class="hero">
             <div class="emoji" aria-hidden>👨‍💻</div>
-            <h1 class="title">Friendly Dev Portfolio</h1>
-            <p class="subtitle"><span id="typed"></span></p>
-            <p class="subtitle" style="font-size:14px;opacity:.9">A creative, funny, and interview-friendly page that shows personality and skill.</p>
+            <h1 class="title">Amit Kumar</h1>
+            <p class="subtitle"><span id="typed">Full Stack Developer | CI/CD Enthusiast | Problem Solver Extraordinaire</span></p>
+            <p class="subtitle" style="font-size:14px;opacity:.9">Crafting seamless web experiences from front-end to back-end, with a strong focus on automated delivery and robust systems.</p>
         </header>
 
         <section class="controls" style="margin-top:18px">
-            <button id="roastBtn" class="btn primary">Roast me (break the ice)</button>
-            <button id="hireBtn" class="btn ghost">Interview me</button>
-            <a class="btn" href="#projects" style="text-decoration:none;margin-left:8px">See projects</a>
+            <button id="roastBtn" class="btn primary">Tell me a dev joke</button>
+            <button id="hireBtn" class="btn ghost">Let's connect</button>
+            <a class="btn" href="#projects" style="text-decoration:none;margin-left:8px">View Projects</a>
         </section>
 
         <section id="about" style="margin-top:28px;max-width:900px;text-align:left;">
-            <h2>About (short and sharp)</h2>
-            <p>I'm a developer who loves clean code, coffee, and jokes that compile. I make web things that are fast, accessible, and occasionally hilarious.</p>
-            <p style="margin-top:8px">Interview tip: Start with a small problem and watch how I break it down — and then patch it with style.</p>
+            <h2>About Me</h2>
+            <p>I'm Amit Kumar, a dedicated Full Stack Developer with a knack for building scalable, high-performance web applications. My journey in tech is driven by a passion for elegant code, efficient development workflows, and a relentless pursuit of learning new technologies.</p>
+            <p style="margin-top:8px">I thrive on turning complex problems into simple, user-friendly solutions, always keeping performance, security, and maintainability at the forefront. As a CI/CD enthusiast, I believe in automating everything from testing to deployment to ensure rapid and reliable software delivery.</p>
         </section>
 
         <section id="skills" style="margin-top:24px;max-width:900px;text-align:left;">
-            <h2>Skills (and vibes)</h2>
+            <h2>Skills & Expertise</h2>
             <ul>
-                <li>HTML/CSS — semantic, responsive, and delightful</li>
-                <li>JavaScript — pragmatic and playful</li>
-                <li>DevOps basics — I make sure deployments aren't haunted</li>
-                <li>Problem solving — I debug without breaking hearts</li>
+                <li><strong>Front-End:</strong> React, Angular, Vue.js, HTML5, CSS3 (Sass, Less), JavaScript (ES6+)</li>
+                <li><strong>Back-End:</strong> Node.js (Express), Python (Django, Flask), Java (Spring Boot), RESTful APIs, GraphQL</li>
+                <li><strong>Databases:</strong> MongoDB, PostgreSQL, MySQL, Redis</li>
+                <li><strong>DevOps & CI/CD:</strong> Docker, Kubernetes, AWS (EC2, S3, Lambda), Azure, Jenkins, GitLab CI/CD, GitHub Actions</li>
+                <li><strong>Cloud Platforms:</strong> Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP)</li>
+                <li><strong>Tools & Methodologies:</strong> Git, Agile/Scrum, TDD, Unit Testing, Integration Testing</li>
+                <li><strong>Problem Solving:</strong> Analytical thinking, debugging, performance optimization, system design</li>
             </ul>
         </section>
 
         <section id="projects" style="margin-top:24px;max-width:900px;text-align:left;">
-            <h2>Projects (curated for interviews)</h2>
+            <h2>Featured Projects</h2>
             <div style="display:flex;gap:12px;flex-wrap:wrap">
                 <article style="background:var(--glass);padding:14px;border-radius:8px;min-width:240px;flex:1">
-                    <h3>Playful CLI</h3>
-                    <p>A tiny terminal that tells jokes and greets your CI pipeline. Click "Demo" to run.</p>
-                    <button class="btn" data-demo="cli">Demo</button>
+                    <h3>E-commerce Microservices</h3>
+                    <p>A scalable e-commerce platform built with Spring Boot microservices, React frontend, Docker, and deployed on Kubernetes. Features automated CI/CD pipeline.</p>
+                    <a href="#" class="btn" target="_blank">View on GitHub</a>
                 </article>
                 <article style="background:var(--glass);padding:14px;border-radius:8px;min-width:240px;flex:1">
-                    <h3>Mini Dashboard</h3>
-                    <p>Shows uptime, jokes-per-minute, and your team's caffeine status.</p>
-                    <button class="btn" data-demo="dash">Demo</button>
+                    <h3>Real-time Chat Application</h3>
+                    <p>Developed a real-time chat application using Node.js, WebSockets, and MongoDB. Includes user authentication and persistent message history.</p>
+                    <a href="#" class="btn" target="_blank">Live Demo</a>
+                </article>
+                <article style="background:var(--glass);padding:14px;border-radius:8px;min-width:240px;flex:1">
+                    <h3>CI/CD Pipeline for Serverless App</h3>
+                    <p>Implemented a fully automated CI/CD pipeline for a serverless application using AWS Lambda, API Gateway, S3, and GitHub Actions.</p>
+                    <a href="#" class="btn" target="_blank">Case Study</a>
                 </article>
             </div>
-            <div id="demoArea" style="margin-top:14px;padding:12px;border-radius:8px;background:rgba(255,255,255,0.6);min-height:60px"></div>
         </section>
 
         <section id="contact" style="margin-top:24px;max-width:900px;text-align:left;">
-            <h2>Contact</h2>
-            <p>If you're an interviewer: press <strong>Interview me</strong> and I'll show a short checklist to run during a first call.</p>
+            <h2>Get in Touch</h2>
+            <p>I'm always open to discussing new projects, interesting ideas, or opportunities. Feel free to reach out!</p>
+            <p>
+                Email: <a href="mailto:amit.kumar@example.com">amit.kumar@example.com</a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/amitkumar" target="_blank">linkedin.com/in/amitkumar</a><br>
+                GitHub: <a href="https://github.com/amitkumar" target="_blank">github.com/amitkumar</a>
+            </p>
         </section>
 
         <footer class="foot" style="margin-top:28px">
-            <small>Pro tip: keep jokes short in interviews. Want this pushed to your repo? Tell me to commit.</small>
+            <small>&copy; 2024 Amit Kumar. Built with passion and clean code.</small>
         </footer>
     </main>
 
@@ -76,6 +88,45 @@
                     // call the same behavior as Roasting button by synthesizing a Space key event
                     const evt = new KeyboardEvent('keydown',{code:'Space',key:' ',bubbles:true});
                     window.dispatchEvent(evt);
+                });
+            }
+
+            // Custom logic for "Tell me a dev joke" button
+            const roastBtn = document.getElementById('roastBtn');
+            const demoArea = document.getElementById('demoArea');
+            const jokes = [
+                "Why do programmers prefer dark mode? Because light attracts bugs!",
+                "There are 10 types of people in the world: those who understand binary, and those who don't.",
+                "Debugging: Removing the needles from the haystack, only to realize it was a bug in your own code.",
+                "My code doesn't have bugs, it has random features.",
+                "Why was the JavaScript developer sad? Because he didn't Node how to Express himself."
+            ];
+
+            if (roastBtn) {
+                roastBtn.addEventListener('click', () => {
+                    const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+                    if (demoArea) {
+                        demoArea.innerHTML = `<p>${randomJoke}</p>`;
+                    }
+                });
+            }
+
+            // Custom logic for "Let's connect" button
+            const hireBtn = document.getElementById('hireBtn');
+            if (hireBtn) {
+                hireBtn.addEventListener('click', () => {
+                    if (demoArea) {
+                        demoArea.innerHTML = `
+                            <p>Great! Let's schedule a chat. Here's what we can cover:</p>
+                            <ul>
+                                <li>Quick intro to your team and role.</li>
+                                <li>My experience relevant to your needs.</li>
+                                <li>A dive into one of my projects.</li>
+                                <li>Any technical questions you have.</li>
+                            </ul>
+                            <p>Looking forward to it!</p>
+                        `;
+                    }
                 });
             }
         });
